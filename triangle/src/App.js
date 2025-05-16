@@ -1,23 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
+import CardBox from './components/CardBox';
+import sejong_logo from './assets/images/sejong_logo.png';
+import UnderlineText from './components/UnderlineText';
+import React, { useState } from 'react';
 
 function App() {
+  // return (
+  //   <div className="App">
+  //     <CardBox
+  //       logo={sejong_logo}
+  //       alt=""
+  //       onClick={() => window.open('https://ecampus.sejong.ac.kr', '_blank')}
+  //     />
+  //     <CardBox
+  //       logo={sejong_logo}
+  //       alt=""
+  //       onClick={() => window.open('https://ecampus.sejong.ac.kr', '_blank')}
+  //     />
+  //   </div>
+  // );
+
+
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const handleClick = (index) => {
+    setActiveIndex(index);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ display: 'flex', gap: '20px' }}>
+      <UnderlineText 
+        text="Buy online" 
+        isActive={activeIndex === 0}
+        onClick={() => handleClick(0)} 
+      />
+      <UnderlineText 
+        text="Buy in store" 
+        isActive={activeIndex === 1}
+        onClick={() => handleClick(1)} 
+      />
     </div>
   );
 }
