@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/CardBox.css';
+import './CardBox.css';
 
 const CardBox = ({ logo, alt, onClick }) => (
   <div className="card-box" onClick={onClick}>

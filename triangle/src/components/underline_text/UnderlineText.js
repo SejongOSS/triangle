@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/UnderlineText.css';
+import './UnderlineText.css';
 
 const UnderlineText = ({ text, onClick, isActive }) => {
     return (

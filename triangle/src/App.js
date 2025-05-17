@@ -1,7 +1,7 @@
 import './App.css';
-import CardBox from './components/CardBox';
+import CardBox from './components/card_box/CardBox';
 import sejong_logo from './assets/images/sejong_logo.png';
-import UnderlineText from './components/UnderlineText';
+import UnderlineText from './components/underline_text/UnderlineText';
 import React, { useState } from 'react';
 
 function App() {
